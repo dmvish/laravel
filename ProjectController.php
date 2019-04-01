@@ -71,7 +71,7 @@ class ProjectController extends Controller
 
         $validator = Validator::make($projectData, [
             'title' => 'required|max:255',
-            'url' => 'sometimes|url'
+            'url' => 'required|url'
         ]);
 
         if ($validator->fails()) {
